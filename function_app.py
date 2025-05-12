@@ -6,6 +6,7 @@ import logging
 app = func.FunctionApp()
 
 
+
 @app.blob_trigger(arg_name="myblob", path="images",
                                connection="AzureWebJobsStorage") 
 def HelloBlob(myblob: func.InputStream):
